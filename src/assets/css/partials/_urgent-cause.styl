@@ -1,0 +1,52 @@
+.urgentCauseWrapper
+    flexCenter()
+    flex-direction column
+    hr
+        border none
+        height 1px
+        width 100%
+        background-color $brandPrimaryLight
+        margin 1rem 0 2rem 0
+    h5
+        letter-spacing $wideLetters
+        font-size $miniParagraph
+        margin 1rem 0
+    .quote
+        max-width 80%
+        text-align center
+    
+
+.urgentCause
+    flexCenter()
+    background rgba(255,255,255, 0.9)
+    position relative
+    h1
+        font-family $openSans
+        font-weight 600
+    strong
+        font-weight 900
+     &:after
+        underlayGradient($gradientLeft, $gradientRight)
+
+.urgentItems
+    flexCenter()
+    width 100%
+    > *
+        width 33.3%
+    
+.urgentLeft
+    h2
+        text-align right
+        
+.urgentCenter
+    flexCenter()
+    flex-direction column
+    height 300px
+    
+.urgentRight
+    ulReset()
+    h4
+        text-transform none
+        text-align left
+    strong
+        font-family $openSans

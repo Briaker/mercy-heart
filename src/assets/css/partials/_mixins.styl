@@ -1,0 +1,56 @@
+patternOverlay(imageUrl, opac = 1)
+    content ' '
+    background url(imageUrl)
+    position absolute
+    opacity opac
+    top 0
+    bottom 0
+    left 0
+    right 0
+    z-index 10
+
+underlayImage(imageUrl)
+    content ' '
+    background url(imageUrl)
+    position absolute
+    top 0
+    bottom 0
+    left 0
+    right 0
+    z-index -10
+
+underlayColor(colour)
+    content ' '
+    background-color colour
+    position absolute
+    top 0
+    bottom 0
+    left 0
+    right 0
+    z-index -10
+    
+underlayGradient(colour1, colour2, angle = 90deg)
+    content ' '
+    background linear-gradient(angle, colour1, colour2)
+    position absolute
+    top 0
+    bottom 0
+    left 0
+    right 0
+    z-index -10
+    
+ulReset()
+    ul
+        list-style none
+        margin 0
+        padding 0
+        
+flexCenter()
+    display flex
+    align-items center
+    justify-content center
+    
+backgroundDarkGradient()
+    position relative
+    background-color: rgb(76,76,76);
+    background: linear-gradient(90deg, $gradientLeftDark, $gradientRightDark);

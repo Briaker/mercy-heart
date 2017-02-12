@@ -1,14 +1,9 @@
 {
   "name": "npm-build-boilerplate",
-  "version": "1.2.0",
+  "version": "0.0.1",
   "description": "A set of common build tasks written with npm scripts.",
   "author": "Damon Bauer <hello@damonbauer.me>",
   "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/damonbauer/npm-build-boilerplate"
-  },
-  "bugs": "https://github.com/damonbauer/npm-build-boilerplate/issues",
   "keywords": [
     "npm",
     "scripts",
@@ -18,14 +13,14 @@
     "compress"
   ],
   "scripts": {
-    "clean": "rimraf dist/{css/*,js/*,img/*}",
-    "create-directories": "mkdirp dist/js -p && mkdirp dist/img/icons -p && mkdirp dist/css -p",
+    "clean": "rimraf dist/assets/{css/*,js/*,images/*}",
+    "create-directories": "mkdirp dist/assets/js -p && mkdirp dist/assets/images/icons -p && mkdirp dist/assets/css -p",
     
-    "autoprefixer": "postcss -u autoprefixer -r dist/css/*",
-    "stylus": "stylus src/css/main.styl -o dist/css/style.css",
-    "lint": "eslint src/js",
-    "imagemin": "imagemin src/img/* -o dist/img",
-    "icons": "svgo -f src/img/icons -o dist/img/icons && svg-sprite-generate -d dist/img/icons -o dist/img/icons/sprite.svg",
+    "autoprefixer": "postcss -u autoprefixer -r dist/assets/css/*",
+    "stylus": "stylus src/assets/css/main.styl -o dist/assets/css/style.css",
+    "lint": "eslint src/assets/js",
+    "imagemin": "imagemin src/assets/images/* -o dist/assets/images",
+    "icons": "svgo -f src/assets/images/icons -o dist/assets/images/icons && svg-sprite-generate -d dist/assets/images/icons -o dist/assets/images/icons/sprite.svg",
     "build:css": "npm run stylus && npm run autoprefixer",
     "build:js": "npm run lint",
     "build:images": "npm run imagemin && npm run icons",
@@ -35,7 +30,7 @@
     "serve:pre-release": "browser-sync start --config bs-config-pre-release.js",
 
     "serve": "browser-sync start --config bs-config.js",
-    "watch:css": "stylus -u autoprefixer-stylus -w ./src/css/main.styl -o ./src/css/style.css",
+    "watch:css": "stylus -u autoprefixer-stylus -w ./src/assets/css/main.styl -o ./src/assets/css/style.css",
     "watch": "concurrently --names \"serve, stylus\" --prefix name \"npm run serve\" \"npm run watch:css\"",
     "postinstall": "npm run create-directories && npm run build && npm run watch"
   },
