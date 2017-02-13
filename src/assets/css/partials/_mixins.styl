@@ -1,3 +1,21 @@
+wideTitle()
+    text-transform uppercase
+    letter-spacing $wideLetters
+    
+ulReset()
+    ul
+        list-style none
+        margin 0
+        padding 0
+
+flexCenter()
+    display flex
+    align-items center
+    justify-content center
+    
+//  Returns an after element that will overlay over the parent container
+//  @param  imageUrl    the background image
+//  @param  opac        the opacity of the image overlay, default: 1
 patternOverlay(imageUrl, opac = 1)
     position relative
     &:after
@@ -10,56 +28,27 @@ patternOverlay(imageUrl, opac = 1)
         left 0
         right 0
         z-index 10
-
-underlayImage(imageUrl, size = cover, position = center center)
-    position relative
-    &:after
-        content ' '
-        background url(imageUrl)
-        background-size size
-        background-position position
-        position absolute
-        top 0
-        bottom 0
-        left 0
-        right 0
-        z-index -10
-
-underlayColor(colour)
-    content ' '
-    background-color colour
-    position absolute
-    top 0
-    bottom 0
-    left 0
-    right 0
-    z-index -10
-    
-underlayGradient(colour1, colour2, angle = 90deg)
-    content ' '
-    background linear-gradient(angle, colour1, colour2)
-    position absolute
-    top 0
-    bottom 0
-    left 0
-    right 0
-    z-index -10
-    
-ulReset()
-    ul
-        list-style none
-        margin 0
-        padding 0
         
-flexCenter()
-    display flex
-    align-items center
-    justify-content center
+//  Returns a background image with a color overlayed over top of it.
+//  There is also a fallback background-color.
+//  @param  color       an RGBA() value, this is the overlayed over the image
+//  @param  imageUrl    the background image
+//  @param  size        the size of the background image, default: cover
+//  @param  position    the position of the background image, default: center center
+backgroundColorWithImage(color, imageUrl, size = cover, position = center center)
+    background-color rgb(76,76,76)
+    background linear-gradient(90deg, color, color),url(imageUrl)
+    background-size size
+    background-position position
     
-backgroundDarkGradient()
-    background-color: rgb(76,76,76);
-    background: linear-gradient(90deg, $gradientLeftDark, $gradientRightDark);
-    
-backgroundVibrantGradient()
-    background-color: rgb(76,76,76);
-    background: linear-gradient(90deg, $gradientLeft, $gradientRight);
+//  Returns a background image with a gradient overlayed over top of it.
+//  There is also a fallback background-color.
+//  @param  gradient    a linear-gradient() value, this is the overlayed over the image
+//  @param  imageUrl    the background image
+//  @param  size        the size of the background image, default: cover
+//  @param  position    the position of the background image, default: center center
+backgroundGradientWithImage(gradient, imageUrl, size = cover, position = center center)
+    background-color rgb(76,76,76)
+    background gradient,url(imageUrl)
+    background-size size
+    background-position position

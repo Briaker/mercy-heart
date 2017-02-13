@@ -1,6 +1,5 @@
 .blog
-    backgroundDarkGradient()
-    underlayImage("../images/blog.jpg")
+    backgroundGradientWithImage($gradientDark, "../images/blog.jpg")
     h5
         font-family $openSans
         
@@ -18,29 +17,35 @@
     
 .post
     flex-grow 1
+    flexCenter()
+    flex-direction column
+    align-items flex-start
     margin 15px
     background-color $brandAccent
     position relative
+    overflow hidden
     
 .post.small
     width calc(50% - 30px)
     height 240px
+    img
+        height 180px
         
 .post.large
+    justify-content flex-start
     width $full
     height 510px
     margin 0
+    img
+        height 240px
 
 .infoWrapper
-    display flex
-    align-items center
-    justify-content space-around
+    flexCenter()
     flex-wrap wrap
+    align-items flex-end
     background-color $brandPrimaryLight
-    position relative
-    top 100%
-    transform translateY(-100%)
-    
+    width $full
+    height 60px
     i
         color $brandAccent
         padding 0 0.5rem
@@ -51,25 +56,29 @@
     .info
         flexCenter()
         flex-grow 1
-        padding 1rem
+        height 100%
         &:not(:last-child)
             border-right 1px solid $brandNeutral
         
-    .description
-        padding-top $smallSectionPadding
-        flex-shrink 0
-        width $full
-        border-top 1px solid $brandNeutral
-        p, h4, h5
-            padding-left 2rem
-        p
-            color $brandDim
-            padding-bottom 1rem
-        h4, h5
-            text-align left
-        h4
-            font-size $grandParagraph
-            font-weight 400
-            text-transform none
-        h5
-            font-size $miniParagraph
+.description
+    flexCenter()
+    flex-direction column
+    align-items flex-start
+    padding-top $smallSectionPadding
+    flex-grow 1 
+    background-color $brandPrimaryLight
+    border-top 1px solid $brandNeutral
+    p, h4, h5
+        padding-left 2rem
+    p
+        color $brandDim
+        padding-bottom 1rem
+        line-height 1.8rem
+    h4, h5
+        text-align left
+    h4
+        font-weight 400
+        text-transform none
+    h5
+        wideTitle()
+        font-size $miniParagraph
