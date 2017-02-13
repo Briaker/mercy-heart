@@ -1,0 +1,75 @@
+.blog
+    backgroundDarkGradient()
+    underlayImage("../images/blog.jpg")
+    h5
+        font-family $openSans
+        
+.blogWrapper
+    flexCenter()
+    flex-direction column
+
+.postsWrapper
+    flexCenter()
+
+.postsWrapperInner
+    flexCenter()
+    flex-wrap wrap
+    width $half
+    
+.post
+    flex-grow 1
+    margin 15px
+    background-color $brandAccent
+    position relative
+    
+.post.small
+    width calc(50% - 30px)
+    height 240px
+        
+.post.large
+    width $full
+    height 510px
+    margin 0
+
+.infoWrapper
+    display flex
+    align-items center
+    justify-content space-around
+    flex-wrap wrap
+    background-color $brandPrimaryLight
+    position relative
+    top 100%
+    transform translateY(-100%)
+    
+    i
+        color $brandAccent
+        padding 0 0.5rem
+        
+    .fa-heart-o
+        font-weight 900
+        
+    .info
+        flexCenter()
+        flex-grow 1
+        padding 1rem
+        &:not(:last-child)
+            border-right 1px solid $brandNeutral
+        
+    .description
+        padding-top $smallSectionPadding
+        flex-shrink 0
+        width $full
+        border-top 1px solid $brandNeutral
+        p, h4, h5
+            padding-left 2rem
+        p
+            color $brandDim
+            padding-bottom 1rem
+        h4, h5
+            text-align left
+        h4
+            font-size $grandParagraph
+            font-weight 400
+            text-transform none
+        h5
+            font-size $miniParagraph

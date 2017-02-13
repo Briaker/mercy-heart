@@ -1,23 +1,29 @@
 patternOverlay(imageUrl, opac = 1)
-    content ' '
-    background url(imageUrl)
-    position absolute
-    opacity opac
-    top 0
-    bottom 0
-    left 0
-    right 0
-    z-index 10
+    position relative
+    &:after
+        content ' '
+        background url(imageUrl)
+        position absolute
+        opacity opac
+        top 0
+        bottom 0
+        left 0
+        right 0
+        z-index 10
 
-underlayImage(imageUrl)
-    content ' '
-    background url(imageUrl)
-    position absolute
-    top 0
-    bottom 0
-    left 0
-    right 0
-    z-index -10
+underlayImage(imageUrl, size = cover, position = center center)
+    position relative
+    &:after
+        content ' '
+        background url(imageUrl)
+        background-size size
+        background-position position
+        position absolute
+        top 0
+        bottom 0
+        left 0
+        right 0
+        z-index -10
 
 underlayColor(colour)
     content ' '
@@ -51,6 +57,9 @@ flexCenter()
     justify-content center
     
 backgroundDarkGradient()
-    position relative
     background-color: rgb(76,76,76);
     background: linear-gradient(90deg, $gradientLeftDark, $gradientRightDark);
+    
+backgroundVibrantGradient()
+    background-color: rgb(76,76,76);
+    background: linear-gradient(90deg, $gradientLeft, $gradientRight);

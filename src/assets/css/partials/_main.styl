@@ -43,7 +43,7 @@ blockquote
     font-size $grandParagraph
     font-weight 100
     
-.quote
+.largeQuotes
     position relative
     
     &:before, &:after 
@@ -62,7 +62,7 @@ blockquote
         content '”'
         right 0
 img
-    width 100%
+    width $full
 
 section
     padding $largeSectionPadding 0
@@ -121,14 +121,24 @@ button, input[type="submit"], input[type="button"]
     transition all 0.2s ease-in-out
     &:hover
         background-color rgba(255,255,255,0.1)
+
+.socialMediaIcon
+    padding 0.5rem
+    color $brandNeutral
+    &:hover
+        color $brandAccent
+        transform scale(1.2)
+        transition scale 0.4s ease
     
 .logoWrapper
     flexCenter()
-    width 320px
+    margin 2rem
+    width $logoWrapperWidth
     justify-content space-between
     h2
         font-size 2rem
     img
+        margin 0 1rem
         width 91px
     :nth-child(2)
         order 2
@@ -137,195 +147,74 @@ button, input[type="submit"], input[type="button"]
 // =            END OF REPEATABLE CLASSES            =
 // ===================================================
 
-// .recentCauses
-//     background-color $brandAccent
-
-.recentCausesWrapper
-    ulReset()
-    display flex
-    flex-direction column
-
-.recentCausesNav
-    flexCenter()
-    li
-        padding 1rem 2rem
-
-.causesWrapper
-    flexCenter()
-    flex-wrap no-wrap
+.contactInfo
+    background-color rgba(255,255,255,0.85)
+    underlayImage("../images/map.jpg")
     
-.causeWrapper
-    margin 1rem
-    background-color $brandPrimaryDark
-    width $third
-
-    .subTitle
-        color #989898
-        
-    .causeTitle
-        font-weight 600
-        font-size $bigHeader
-        text-transform none
-        color $brandPrimaryLight
-        padding 2rem
-        padding-top 90%
-    
-.progressBottom
+.contactInfoWrapper
     flexCenter()
     flex-direction column
-    background-color $brandPrimaryLight
-    border 1px solid $brandNeutral
-    border-top 0
-
-.progressBarWrapper
-    background-color $brandNeutral
     position relative
-    height 10px
-    &:after
-        patternOverlay("../images/stripes-pattern.png", opac = 0.3)
-
-.progressBar
-    position absolute
-    background-color $brandAccent
-    top 0
-    left 0
-    bottom 0
-    width 30%
-    transition width 0.4s ease-in-out
-        
-.countWrapper
-    flexCenter()
-    .count
+    bottom -6rem
+    z-index 20
+    ulReset()
+    
+    ul
+        flexCenter()
+        justify-content space-around
+        width $full
+        img
+            width 48px
+            margin-bottom 2rem
+    li
         flexCenter()
         flex-direction column
         p
-            text-transform uppercase
-            font-weight 100
-            margin 0
-        h3
-            text-transform lowercase
-            color $brandPrimaryDark
-            font-family $openSans
-            font-weight 900
-            
-        .number
-            font-size $largerHeader
-            
-.countOf
-    padding 0.75rem
-    font-weight 100
-    font-family $georgia
-    font-style italic
-    font-size 1.4rem
-    line-height 1rem
-    margin-top 0
-    margin 0 1rem
-    height 100%
-    background linear-gradient(115deg, #FFFFFF 0, #FFFFFF 39px, $brandNeutral 40px, #FFFFFF 41px, #FFFFFF 50px)
-    background-color goldenrod
-    p
-        margin 1rem 0
+            margin 0.25rem
         
-
-
-.slider
-    padding 0 12.5%
-    background-color lighten(goldenrod, 10)
-    > *
+    form
         flexCenter()
-        width $third
-        height 200px
-        background-color goldenrod
-        border 2px solid lighten(goldenrod, 20)
-        
-.purchase
-    padding $smallSectionPadding 0
-    
-.purchaseWrapper
-    flexCenter()
-    justify-content space-around
-    width 100%
-    p
-        font-size $grandParagraph
-    button
-        margin 0
-.blog
-    backgroundDarkGradient()
-    h5
-        font-family $openSans
-        
-
-.blogWrapper
-    flexCenter()
-    flex-direction column
-
-.postsWrapper
-    flexCenter()
-
-.postsWrapperInner
-    flexCenter()
-    flex-wrap wrap
-    width $half
-    
-.post
-    flex-grow 1
-    margin 15px
-    background-color $brandAccent
-    position relative
-    
-.post.small
-    width calc(50% - 30px)
-    height 240px
-        
-.post.large
-    width $full
-    height 510px
-    margin 0
-
-.infoWrapper
-    display flex
-    align-items center
-    justify-content space-around
-    flex-wrap wrap
-    background-color $brandPrimaryLight
-    position relative
-    top 100%
-    transform translateY(-100%)
-    
-    i
-        color $brandAccent
-        padding 0 0.5rem
-        
-    .fa-heart-o
-        font-weight 900
-        
-    .info
-        flexCenter()
-        flex-grow 1
-        padding 1rem
-        &:not(:last-child)
-            border-right 1px solid $brandNeutral
-        
-    .description
-        padding-top $smallSectionPadding
-        flex-shrink 0
+        flex-wrap wrap
+        background-color $brandPrimaryLight
+        margin-top 4rem
+        padding 2rem
         width $full
-        border-top 1px solid $brandNeutral
-        p, h4, h5
-            padding-left 2rem
-        p
-            color $brandNeutral
-            padding-bottom 1rem
-        h4, h5
-            text-align left
-        h4
-            font-size $grandParagraph
-            font-weight 400
-            text-transform none
-        h5
-            font-size $miniParagraph
+        
+    .formColumn
+        flexCenter()
+        flex-direction column
+        width $half
+        height $full
+        padding 1rem
+        img
+            left 1rem
+            top 0.5rem
+            width 18px
+            position absolute
 
-       
+    .inputWrapper, input[type="text"], textarea
+        width $full
+        margin-bottom 0.5rem
+    
+    input[type="text"], textarea
+        padding 0.5rem
+        border none
+        border 1px solid $brandNeutral
+        
+    .inputWrapper
+        position relative
+        margin 0
+        
+    input[type="text"]
+        padding-left 2.5rem
+
+    textarea
+        resize none
+        text-indent 2rem
+        height calc(((2rem + 0.5rem) * 3))
+    
+        
+
 // ===================================================
 // =                 DEBUGING CLASSES                =
 // ===================================================

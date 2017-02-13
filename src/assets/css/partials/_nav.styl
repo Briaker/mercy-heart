@@ -2,19 +2,37 @@ nav
     ulReset()
     display flex
     flex-direction column
-    width 100%
+    width $full
 
-.navTop 
-    background lighten(goldenrod, 10)
+.navTop
     display flex
     flex-direction column
     flex-wrap wrap
-    width 100%
+    width $full
     ul
-        display flex
-        background lighten(goldenrod, 20)
-        justify-content space-between
+        flexCenter()
+        justify-content space-around
         padding 0
+    .navTopItem
+        flexCenter()
+        width $third
+        &:first-of-type
+            justify-content flex-start
+            margin-left 2rem
+        &:last-of-type
+            justify-content flex-end
+            margin-right 2rem
+        
+.menuToggle
+    background-color red
+    font-size 1rem
+    font-weight 100
+    width 1.4rem
+    height 1.4rem
+    cursor pointer
+    background url("../images/menu.png")
+    background-position center center
+    background-size cover
         
 .navBottom
     ul
@@ -22,5 +40,5 @@ nav
         flexCenter()
         li
             padding 1rem
-    width 100%
-    background goldenrod
+    width $full
+    background rgb(50,50,50)
