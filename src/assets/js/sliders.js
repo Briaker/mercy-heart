@@ -1,23 +1,52 @@
 $(document).ready(function(){
-  var carousel = $(".owl-carousel");
 
-  carousel.owlCarousel({
-        items:4,
-        loop:true,
-        center:true,
-        margin:0
-    });    
 
-    $( ".owl-prev").click(function(e) {
-        e.preventDefault();
-        carousel.trigger('prev.owl.carousel');
+    var causesSlider = new Swiper ('.causesSliderContainer', {
+        loop: true,
+        slidesPerView: 3,
+        spaceBetween: 30,
+        centeredSlides: true,
+        loopAdditionalSlides: 0,
+        nextButton: '.causesNext',
+        prevButton: '.causesPrev',
+        breakpoints: {
+            1170: {
+                slidesPerView: 2
+            },
+            940: {
+                slidesPerView: 2
+            },
+            767: {
+                slidesPerView: 1
+            },
+            480: {
+                slidesPerView: 1
+            }
+        }
+
     });
 
-    $( ".owl-next").click(function(e) {
-        e.preventDefault();
-        carousel.trigger('next.owl.carousel');
+    var gallerySlider = new Swiper ('.gallerySliderContainer', {
+        loop: true,
+        slidesPerView: 4,
+        centeredSlides: true,
+        loopAdditionalSlides: 0,
+        nextButton: '.galleryNext',
+        prevButton: '.galleryPrev',
+        breakpoints: {
+            1170: {
+                slidesPerView: 3
+            },
+            940: {
+                slidesPerView: 2
+            },
+            767: {
+                slidesPerView: 2
+            },
+            480: {
+                slidesPerView: 1
+            }
+        }
+
     });
-
-
-  // $( ".owl-next").html('<i class="fa fa-chevron-right"></i>');
 });

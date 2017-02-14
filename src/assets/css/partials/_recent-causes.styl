@@ -1,6 +1,10 @@
+.recentCauses
+    position relative
+    
 .recentCausesWrapper
     ulReset()
     display flex
+    overflow hidden
     flex-direction column
 
 .recentCausesNav
@@ -12,10 +16,46 @@
     flexCenter()
     flex-wrap no-wrap
     
+.causesSliderContainer
+    width 100%
+    position relative
+    
+.gallerySliderContainer
+    width 100%
+    max-height 100%
+    position relative
+    .swiper-slide
+        max-height 250px
+
+.sliderPrev, .sliderNext
+    position absolute
+    top 50%
+    transform translateY(-50%)
+    z-index 10
+    width 40px
+    height 40px
+    cursor pointer
+    background-size cover
+    background-position center center
+
+.causesPrev
+    left 4rem
+    background url("../images/arrow-left-big-dark.png")
+    
+.causesNext
+    right 4rem
+    background url("../images/arrow-right-big-dark.png")
+
+.galleryPrev
+    left 4rem
+    background url("../images/arrow-left-big.png")
+    
+.galleryNext
+    right 4rem
+    background url("../images/arrow-right-big.png")
+
 .causeWrapper
-    margin 1rem
     background-color $brandPrimaryDark
-    width $third
 
     .subTitle
         color #989898
@@ -25,7 +65,7 @@
         font-size $bigHeader
         text-transform none
         color $brandPrimaryLight
-        padding 2rem
+        padding 2rem 0
         padding-top 90%
         
     &.water

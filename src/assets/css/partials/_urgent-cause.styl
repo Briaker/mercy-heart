@@ -1,3 +1,23 @@
+.urgentCause
+    flexCenter()
+    background-color rgba(255,255,255, 0.9)
+    position relative
+    h1
+        font-family $openSans
+        font-weight 600
+    strong
+        font-weight 900
+        
+.urgentCause:before
+    content ' '
+    background linear-gradient(90deg, $gradientLeft, $gradientRight)
+    position absolute
+    top 0
+    bottom 0
+    left 0
+    right 0
+    z-index -10
+        
 .urgentCauseWrapper
     flexCenter()
     flex-direction column
@@ -14,19 +34,6 @@
     .quote
         max-width 80%
         text-align center
-    
-
-.urgentCause
-    flexCenter()
-    background rgba(255,255,255, 0.9)
-    position relative
-    h1
-        font-family $openSans
-        font-weight 600
-    strong
-        font-weight 900
-     &:after
-        underlayGradient($gradientLeft, $gradientRight)
 
 .urgentItems
     flexCenter()
@@ -56,10 +63,10 @@
     position absolute
     width 200px
     
-.stGreyAnimate
-    animation grow 5s linear forwards
+.stOverlayAnimate
+    animation fillUp 1s ease forwards
 
-.st0, .st1, .st2, .stGrey
+.stRed, .stDashes, .stOverlay
     fill none
     stroke $brandAccent
     stroke-width 10
@@ -67,15 +74,14 @@
     stroke-dasharray 1000, 1000
     stroke-dashoffset 227
     
-.st2
+.stDashes
     stroke lighten($brandAccent, 10)
     stroke-dasharray 12,12
     
-.stGrey
+.stOverlay
     stroke-width 11
     stroke $brandNeutral
     animation fillUp 1s ease forwards
-    
     
 @keyframes fillUp
     to

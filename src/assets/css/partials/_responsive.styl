@@ -1,0 +1,34 @@
+@media (max-width: 1170px)
+    body
+        border 5px solid cadetblue
+        
+@media (max-width: 940px)
+    .postsWrapper, .faqWrapper
+        flex-direction column
+    .faqWrapper .faqItem
+        width $full
+    body
+        border 5px solid brown
+        
+@media (max-width: 767px)
+    .contactInfoWrapper .formColumn
+        width $full
+    
+    .contactInfoWrapper ul
+        flex-direction column
+
+    .contactInfoWrapper li
+        margin-top 2rem
+        
+    body
+        border 5px solid rebeccapurple
+        
+@media (max-width: 480px)
+    body
+        border 5px solid goldenrod
+
+
+// donations: left item is being squished
+// blog: all items are being squished
+
+// faq: question text and bullet points are forced onto second line
