@@ -15,33 +15,33 @@
     <body>
         <nav>
             <div class="navTop lightSection">
-                <ul>
-                    <li class="navTopItem">
+                <ul class="navTopItems">
+                    <li class="navTopItem menu">
                         <div class="menuToggle"></div>
                     </li>
-                    <li class="navTopItem">
+                    <li class="navTopItem logo">
                         <div class="logoWrapper">
                             <h2><strong>Mercy</strong></h2> 
                             <h2>Heart</h2> 
                             <img src="assets/images/logo.png" class="logo" alt="logo">
                         </div>
                     </li>
-                    <li class="navTopItem">
-                        <a href=""><i class="fa fa-facebook socialMediaIcon" aria-hidden="true"></i></a>
-                        <a href=""><i class="fa fa-twitter socialMediaIcon" aria-hidden="true"></i></a>
-                        <a href=""><i class="fa fa-google socialMediaIcon" aria-hidden="true"></i></a>
+                    <li class="navTopItem socialMedia">
+                        <a href="#"><i class="fa fa-facebook socialMediaIcon" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fa fa-twitter socialMediaIcon" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fa fa-google socialMediaIcon" aria-hidden="true"></i></a>
                     </li>
                 </ul>
             </div>
 
             <div class="navBottom">
-                <ul>
-                    <li><a href="">Main</a></li>
-                    <li><a href="">Causes</a></li>
-                    <li><a href="">Events</a></li>
-                    <li><a href="">Blog</a></li>
-                    <li><a href="">Pages</a></li>
-                    <li><a href="">Contact</a></li>
+                <ul class="navBottomItems">
+                    <li class="navBottomItem"><a href="#">Main</a></li>
+                    <li class="navBottomItem"><a href="#">Causes</a></li>
+                    <li class="navBottomItem"><a href="#">Events</a></li>
+                    <li class="navBottomItem"><a href="#">Blog</a></li>
+                    <li class="navBottomItem"><a href="#">Pages</a></li>
+                    <li class="navBottomItem"><a href="#">Contact</a></li>
                 </ul>
             </div>
         </nav>
@@ -59,21 +59,27 @@
                 <div class="contribution contributionLeft">
                     <h2>Donator</h2>
                     <hr>
-                    <p>Do good by stealth, and blush <br> to find it fame</p>
+                    <div class="miniWrapper">
+                        <p>Do good by stealth, and blush to find it fame</p>
+                    </div>
                     <button>Donate Us</button>
                 </div>
 
                 <div class="contribution contributionMiddle">
                     <h2>Volunteer</h2>
                     <hr>
-                    <p>Give the gift of volunteering to those <br> who needed</p>
+                    <div class="miniWrapper">
+                        <p>Give the gift of volunteering to those who needed</p>
+                    </div>
                     <button>Join Us</button>
                 </div>
 
                 <div class="contribution contributionRight">
                     <h2>Adopter</h2>
                     <hr>
-                    <p>Adoption is willingly given from <br> your heart</p>
+                    <div class="miniWrapper">
+                        <p>Adoption is willingly given from your heart</p>
+                    </div>
                     <button>Adpot A Kid</button>
                 </div>
 
@@ -82,13 +88,13 @@
             <section class="urgentCause lightSection">
                 <div class="wrapper urgentCauseWrapper">
                     <div class="urgentItems">
-                        <div class="urgentLeft">
-                            <h2><strong>Most</strong></h2>
-                            <h2><span class="thin">Urgent</span></h2>
-                            <h2><span class="thin">Cause</span></h2>
+                        <div class="urgentItem urgentLeft">
+                            <h2>
+                                <strong>Most</strong> <span class="thin">Urgent Cause</span>
+                            </h2>
                         </div>
 
-                        <div class="urgentCenter">
+                        <div class="urgentItem urgentCenter">
                             <h1><strong><span class="highlight number">95</span></strong>&#37;</h1>
 
                             <h4>Donated</h4>
@@ -107,8 +113,8 @@
                             </div>
                         </div>
 
-                        <div class="urgentRight">
-                            <ul>
+                        <div class="urgentItem urgentRight">
+                            <ul class="urgentItemInfo">
                                 <li>
                                     <h4><strong>$80 000</strong> Needed</h4>
                                 </li>
@@ -232,8 +238,15 @@
                         </div>
                     </div>
                 </div>
-                <div class="sliderPrev causesPrev"></div>
-                <div class="sliderNext causesNext"></div>
+
+                <div class="sliderPrev causesPrev">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 100 125" version="1.1" x="0px" y="0px"><g stroke="none" stroke-width="1" fill="none"><g><rect class="causesArrowSVG" transform="translate(36.688077, 29.688077) rotate(-315.000000) translate(-36.688077, -29.688077) " x="34.6880772" y="-1.81192283" width="4" height="63"/><rect class="causesArrowSVG" transform="translate(36.688077, 71.688077) scale(-1, 1) rotate(-315.000000) translate(-36.688077, -71.688077) " x="34.6880772" y="40.1880772" width="4" height="63"/></g></g></svg>
+                </div>
+
+                <div class="sliderNext causesNext">
+                   <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 100 125" version="1.1" x="0px" y="0px"><g stroke="none" stroke-width="1" fill="none"><g><rect class="causesArrowSVG" transform="translate(56.688077, 29.688077) scale(-1, 1) rotate(-315.000000) translate(-56.688077, -29.688077) " x="54.6880772" y="-1.81192283" width="4" height="63"/><rect class="causesArrowSVG" transform="translate(56.688077, 71.688077) rotate(-315.000000) translate(-56.688077, -71.688077) " x="54.6880772" y="40.1880772" width="4" height="63"/></g></g></svg>
+                </div>
+
             </section>
 
             <section class="slider">
@@ -274,8 +287,12 @@
     
                     </div>
                 </div>
-                <div class="sliderPrev galleryPrev"></div>
-                <div class="sliderNext galleryNext"></div>
+                <div class="sliderPrev galleryPrev">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 100 125" version="1.1" x="0px" y="0px"><g stroke="none" stroke-width="1" fill="none"><g><rect class="galleryArrowSVG" transform="translate(36.688077, 29.688077) rotate(-315.000000) translate(-36.688077, -29.688077) " x="34.6880772" y="-1.81192283" width="4" height="63"/><rect class="galleryArrowSVG" transform="translate(36.688077, 71.688077) scale(-1, 1) rotate(-315.000000) translate(-36.688077, -71.688077) " x="34.6880772" y="40.1880772" width="4" height="63"/></g></g></svg>
+                </div>
+                <div class="sliderNext galleryNext">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 100 125" version="1.1" x="0px" y="0px"><g stroke="none" stroke-width="1" fill="none"><g><rect class="galleryArrowSVG" transform="translate(56.688077, 29.688077) scale(-1, 1) rotate(-315.000000) translate(-56.688077, -29.688077) " x="54.6880772" y="-1.81192283" width="4" height="63"/><rect class="galleryArrowSVG" transform="translate(56.688077, 71.688077) rotate(-315.000000) translate(-56.688077, -71.688077) " x="54.6880772" y="40.1880772" width="4" height="63"/></g></g></svg>
+                </div>
             </section>
 
             <section class="purchase lightSection">
@@ -293,7 +310,7 @@
                         <div class="postsWrapperInner">
 
                             <div class="post small lightSection">
-                                <img src="assets/images/gallery/03.jpg" alt="">
+                                <a href="#" class="imageWrapper"><img src="assets/images/gallery/03.jpg" alt=""></a>
                                 <div class="infoWrapper">
                                     <div class="info">
                                         <i class="fa fa-clock-o" aria-hidden="true"></i>
@@ -309,7 +326,7 @@
                             </div>
 
                            <div class="post small lightSection">
-                                <img src="assets/images/gallery/02.jpg" alt="">
+                                <a href="#" class="imageWrapper"><img src="assets/images/gallery/02.jpg" alt=""></a>
                                 <div class="infoWrapper">
 
                                     <div class="info">
@@ -326,7 +343,7 @@
                             </div>
 
                             <div class="post small lightSection">
-                                <img src="assets/images/gallery/10.jpg" alt="">
+                                <a href="#" class="imageWrapper"><img src="assets/images/gallery/10.jpg" alt=""></a>
                                 <div class="infoWrapper">
 
                                     <div class="info">
@@ -343,7 +360,7 @@
                             </div>
 
                             <div class="post small lightSection">
-                            <img src="assets/images/gallery/09.jpg" alt="">
+                            <a href="#" class="imageWrapper"><img src="assets/images/gallery/09.jpg" alt=""></a>
                                 <div class="infoWrapper">
 
                                     <div class="info">
@@ -362,7 +379,7 @@
 
                         <div class="postsWrapperInner lightSection">
                             <div class="post large">
-                                <img src="assets/images/gallery/blog-big.jpg" alt="">
+                                <a href="#" class="imageWrapper"><img src="assets/images/gallery/blog-big.jpg" alt=""></a>
                                 <div class="infoWrapper">
 
                                     <div class="info">

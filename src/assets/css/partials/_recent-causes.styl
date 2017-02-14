@@ -1,4 +1,6 @@
 .recentCauses
+    padding-left 0
+    padding-right 0
     position relative
     
 .recentCausesWrapper
@@ -9,23 +11,18 @@
 
 .recentCausesNav
     flexCenter()
+    flex-wrap wrap
     li
         padding 1rem 2rem
 
 .causesWrapper
     flexCenter()
     flex-wrap no-wrap
+    padding-top $smallSectionPadding
     
 .causesSliderContainer
     width 100%
     position relative
-    
-.gallerySliderContainer
-    width 100%
-    max-height 100%
-    position relative
-    .swiper-slide
-        max-height 250px
 
 .sliderPrev, .sliderNext
     position absolute
@@ -37,22 +34,16 @@
     cursor pointer
     background-size cover
     background-position center center
+    
+.causesArrowSVG
+    fill $brandNeutral
 
 .causesPrev
     left 4rem
-    background url("../images/arrow-left-big-dark.png")
     
 .causesNext
     right 4rem
-    background url("../images/arrow-right-big-dark.png")
-
-.galleryPrev
-    left 4rem
-    background url("../images/arrow-left-big.png")
     
-.galleryNext
-    right 4rem
-    background url("../images/arrow-right-big.png")
 
 .causeWrapper
     background-color $brandPrimaryDark

@@ -9,21 +9,26 @@ nav
     flex-direction column
     flex-wrap wrap
     width $full
-    ul
-        flexCenter()
-        justify-content space-around
-        padding 0
-    .navTopItem
-        flexCenter()
-        width $third
-        &:first-of-type
-            justify-content flex-start
-            margin-left 2rem
-        &:last-of-type
-            justify-content flex-end
-            margin-right 2rem
+    
+ul.navTopItems
+    flexCenter()
+    justify-content space-around
+    padding 0
+    
+.navTopItem
+    flexCenter()
+    width $third
+    
+.navTopItem:first-of-type
+    justify-content flex-start
+    margin-left 2rem
+    
+.navTopItem:last-of-type
+    justify-content flex-end
+    margin-right 2rem
         
 .menuToggle
+    display none
     background-color red
     font-size 1rem
     font-weight 100
@@ -34,17 +39,27 @@ nav
     background-position center center
     background-size cover
         
+li.navBottomItem a
+    display inline-block
+    padding 1rem 2rem
+    
+li.navBottomItem a:hover
+    background-color lighten(rgba(50,50,50, 1), 5)
+
 .navBottom
-    ul
-        padding 0
-        flexCenter()
-        li
-            padding 1rem 2rem
-            border-left 1px solid $brandPrimaryDark
-            text-transform uppercase
-            font-size $miniParagraph
-            font-weight 100
-        li:last-of-type
-            border-right 1px solid $brandPrimaryDark
     width $full
-    background rgb(50,50,50)
+    background-color rgba(50,50,50, 1)
+    
+ul.navBottomItems
+    padding 0
+    flexCenter()
+    
+li.navBottomItem
+    
+    border-left 1px solid $brandPrimaryDark
+    text-transform uppercase
+    font-size $miniParagraph
+    font-weight 100
+    
+li.navBottomItem:last-of-type
+    border-right 1px solid $brandPrimaryDark

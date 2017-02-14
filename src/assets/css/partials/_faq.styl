@@ -1,3 +1,7 @@
+.faq
+    padding-left 2rem
+    padding-right 2rem
+
 .faqWrapper
     flexCenter()
     
@@ -12,25 +16,32 @@
         height 400px
         width $third
         margin 0 2rem
-        &:not(:last-child)
-            h3
-                font-size $bigHeader
-                text-transform none
-                text-align left
-                margin-bottom 1rem
-                align-self flex-start
+        
+    .faqItem:not(:last-child)
+        h3
+            font-size $bigHeader
+            text-transform none
+            text-align left
+            margin-bottom 1rem
+            align-self flex-start
+            
     .faqLeft
         p
             color $brandDim
+            
         ulReset()
+        
         ul
             width $full
             margin-top 1rem
+            
         li
             border-top 1px solid $brandNeutral
             padding 0.5rem 0
-            &:last-child
-                border-bottom 1px solid $brandNeutral
+            
+        li:last-child
+            border-bottom 1px solid $brandNeutral
+            
         li:before
             content '\25CB '
             color $brandAccent
@@ -67,11 +78,13 @@
         overflow hidden
         p
             color $brandDim
+            
         .answer
             transition all 0.4s ease
             margin-top -100%
-            &.open
-               margin-top 1rem
+            
+        .answerWrapper.open
+            margin-top 1rem
     
     button.faqToggleButton
         border none
@@ -84,9 +97,11 @@
         width 2rem
         height 2rem
         margin 0
-        &:hover, &.open:hover
-            background-color darken($brandAccent, 3)
-        &.open
-            background url("../images/arrow-down.png") $brandAccent
-            background-position center
-            background-repeat no-repeat
+        
+    button.faqToggleButton:hover, button.faqToggleButton.open:hover
+        background-color darken($brandAccent, 3)
+        
+    button.faqToggleButton.open
+        background url("../images/arrow-down.png") $brandAccent
+        background-position center
+        background-repeat no-repeat

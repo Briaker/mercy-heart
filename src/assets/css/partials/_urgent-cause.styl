@@ -1,6 +1,6 @@
 .urgentCause
     flexCenter()
-    background-color rgba(255,255,255, 0.9)
+    backgroundColorWithImage(rgba(255,255,255,0.85), "../images/hands.jpg")
     position relative
     h1
         font-family $openSans
@@ -38,12 +38,13 @@
 .urgentItems
     flexCenter()
     width 100%
-    > *
-        width 33.3%
+        
+.urgentItem
+    width 33.3%
     
-.urgentLeft
-    h2
-        text-align right
+.urgentLeft h2
+    word-spacing 100vw
+    text-align right
         
 .urgentCenter
     flexCenter()

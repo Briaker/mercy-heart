@@ -24,24 +24,11 @@ $(document).ready(function(){
             button.addClass('open');
             answerWrapper.addClass('open');
         }
+    });
+
+    $('.menuToggle').on('click', function(){
+        var menuUl = $('.navBottomItems');
         
-
-       
-
-        // console.log('Do I have a class of open?');
-        // console.log(button);
-        // if(button.hasClass('open')) {
-        //     console.log('Yup!');
-        //     button.removeClass('open');
-        // }
-        // else {
-        //     console.log('Nah');
-        //     button.addClass('open');
-        // }
-        
-        // console.log("I WAS CLICKED");
-        // console.log(button);
-        // console.log(answer);
-
+        menuUl.toggleClass('open');
     });
 });

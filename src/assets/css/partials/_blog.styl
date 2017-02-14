@@ -9,35 +9,45 @@
 
 .postsWrapper
     flexCenter()
+    padding-top $smallSectionPadding
+    height 500px
 
 .postsWrapperInner
     flexCenter()
     flex-wrap wrap
+    justify-content space-between
+    align-items space-between
     width $half
+    height $full
+    
+    
+.postsWrapperInner:last-of-type
+    margin-left $blogPostMargin
     
 .post
     flex-grow 1
     flexCenter()
     flex-direction column
-    align-items flex-start
-    margin 15px
+    align-items flex-end
     background-color $brandAccent
     position relative
     overflow hidden
     
 .post.small
-    width calc(50% - 30px)
-    height 240px
-    img
-        height 180px
+    width calc(50% - 20px)
+    height calc(50% - 10px)
+    
+.post.small:nth-child(-n+2)
+    margin-bottom $blogPostMargin
+    
+.post.small:nth-child(odd)
+    margin-right $blogPostMargin
         
 .post.large
     justify-content flex-start
     width $full
-    height 510px
+    height $full
     margin 0
-    img
-        height 240px
 
 .infoWrapper
     flexCenter()
@@ -45,7 +55,9 @@
     align-items flex-end
     background-color $brandPrimaryLight
     width $full
-    height 60px
+    height $blogInfoHeight
+    position relative
+    z-index 10
     i
         color $brandAccent
         padding 0 0.5rem
@@ -56,15 +68,17 @@
     .info
         flexCenter()
         flex-grow 1
-        height 100%
-        &:not(:last-child)
-            border-right 1px solid $brandNeutral
+        height $blogInfoHeight
+        background-color $brandPrimaryLight
+        
+    .info:not(:last-child)
+        border-right 1px solid $brandNeutral
         
 .description
     flexCenter()
     flex-direction column
     align-items flex-start
-    padding-top $smallSectionPadding
+    justify-content center
     flex-grow 1 
     background-color $brandPrimaryLight
     border-top 1px solid $brandNeutral
@@ -72,8 +86,8 @@
         padding-left 2rem
     p
         color $brandDim
-        padding-bottom 1rem
         line-height 1.8rem
+        margin-bottom 0
     h4, h5
         text-align left
     h4
@@ -82,3 +96,18 @@
     h5
         wideTitle()
         font-size $miniParagraph
+        
+a.imageWrapper
+    position relative
+    overflow hidden
+    height $full
+    width $full
+    img
+        position absolute
+        height 115%
+        width auto
+        left 50%
+        transform translateX(-50%)
+        
+.post.large a.imageWrapper
+    height $half

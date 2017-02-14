@@ -45,28 +45,30 @@ blockquote
     
 .largeQuotes
     position relative
+    max-width 75%
     
-    &:before, &:after 
-        position absolute
-        color $brandAccent
-        font-family $pTSans
-        font-size 5rem
+.largeQuotes:before, &:after 
+    position absolute
+    color $brandAccent
+    font-family $pTSans
+    font-size 5rem
         
-    &:before
-        top 0
-        content '“'
-        left 0
+.largeQuotes:before
+    top 0
+    content '“'
+    left 0
         
-    &:after
-        top 0
-        content '”'
-        right 0
+.largeQuotes:after
+    top 0
+    content '”'
+    right 0
+    
 img
     width $full
 
 section
-    padding $largeSectionPadding 0
     flexCenter()
+    padding $largeSectionPadding $smallSectionPadding
 
 .wrapper
     max-width $wrapperWidth
@@ -140,14 +142,16 @@ button, input[type="submit"], input[type="button"]
         width 91px
     :nth-child(2)
         order 2
+        
+.miniWrapper
+    max-width 75%
             
 // ===================================================
 // =            END OF REPEATABLE CLASSES            =
 // ===================================================
 
 .contactInfo
-    background-color rgba(255,255,255,0.85)
-    underlayImage("../images/map.jpg")
+    backgroundColorWithImage(rgba(255,255,255,0.85), "../images/map.jpg")
     
 .contactInfoWrapper
     flexCenter()

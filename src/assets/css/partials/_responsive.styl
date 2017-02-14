@@ -5,17 +5,113 @@
 @media (max-width: 940px)
     .postsWrapper, .faqWrapper
         flex-direction column
+        width 100%  
+    
+    .postsWrapper
+        height 100%
+        
+    .postsWrapperInner
+        height 500px
+        width 75% 
+        
+    .postsWrapperInner:last-of-type
+        margin-left 0px
+        margin-top $blogPostMargin
+        
     .faqWrapper .faqItem
         width $full
     body
         border 5px solid brown
-        
+
+//PURPLE
 @media (max-width: 767px)
-    .contactInfoWrapper .formColumn
+
+    section
+        padding $largeSectionPadding $smallSectionPadding
+
+    .contribute, .urgentItems, .purchaseWrapper, .contactInfoWrapper ul
+        flex-direction column
+
+    .contribution, .urgentItem
         width $full
     
-    .contactInfoWrapper ul
+    .navTopItem:last-of-type
+        flex-direction row
+
+    // .navTopItem
+    //     width initial
+    // .navTopItems
+    //     flex-direction column-reverse
+    //     align-items center
+        
+    // .navTopItem, .navTopItem:first-of-type, .navTopItem:last-of-type
+    //     justify-content center
+    //     width 100%
+    //     margin 0 1rem
+        
+    .menuToggle
+        display initial
+        
+    .navTopItems
+        position relative
+        
+    .navTopItem
+        width initial
+        
+    .navTopItem.socialMedia, .navTopItem.menu
+        position absolute
+        top 1rem
+        
+    .navTopItem.menu
+        margin-left 1rem
+        left 0
+        
+    .navTopItem.socialMedia
+        margin-right 1rem
+        right 0
+    .socialMediaIcon
+        padding-top 0
+        paddin-bottom 0
+        
+    .navTopItem.logo
+        width 90%
+    
+    ul.navBottomItems
         flex-direction column
+        
+    li.navBottomItem a
+        width 100%
+        
+    li.navBottomItem
+        width $full
+        border none
+        text-align center
+            
+    .navBottom
+        overflow hidden
+
+    ul.navBottomItems
+        transition all 0.4s ease
+        margin-top -100%
+        
+    ul.navBottomItems.open
+        margin-top 0rem
+        
+            
+    ul.urgentItemInfo
+        display flex
+        justify-content center
+        
+    .urgentLeft h2
+        text-align center
+        word-spacing initial
+        
+    .urgentRight ul li
+        padding 1rem
+        display inline-block
+        
+    .contactInfoWrapper .formColumn
+        width $full
 
     .contactInfoWrapper li
         margin-top 2rem
@@ -24,6 +120,9 @@
         border 5px solid rebeccapurple
         
 @media (max-width: 480px)
+        
+    .recentCausesNav li
+        max-width 33.3%
     body
         border 5px solid goldenrod
 
