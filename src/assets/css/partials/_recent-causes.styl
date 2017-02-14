@@ -88,8 +88,32 @@
     top 0
     left 0
     bottom 0
-    width 30%
+    width 10%
     transition width 0.4s ease-in-out
+    
+.progressBar.hunger
+    animation fillUpHunger 1s ease forwards
+    animation-delay 0.2s
+    
+.progressBar.water
+    animation fillUpWater 1s ease forwards
+    animation-delay 0.2s
+    
+.progressBar.adopt
+    animation fillUpAdopt 1s ease forwards
+    animation-delay 0.2s
+    
+@keyframes fillUpHunger
+    to
+        width 93%
+        
+@keyframes fillUpWater
+    to
+        width 65%
+        
+@keyframes fillUpAdopt
+    to
+        width 45%
         
 .countWrapper
     flexCenter()

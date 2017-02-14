@@ -1,6 +1,5 @@
 $(document).ready(function(){
 
-
     var causesSlider = new Swiper ('.causesSliderContainer', {
         loop: true,
         slidesPerView: 3,

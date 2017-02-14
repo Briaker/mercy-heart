@@ -7,7 +7,7 @@ $(document).ready(function(){
             button.removeClass('open');
             answerWrapper.removeClass('open');
         }
-        else{
+        else {
 
             $('.faqToggleButton').each(function() {
                 if($(this).hasClass('open')) {
