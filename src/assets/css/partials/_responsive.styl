@@ -1,14 +1,13 @@
+// Small Screens
 @media (max-width: 940px)
-
     
     // Width and Direction Changes
-    .faqWrapper
+    .faqWrapper, .postsWrapper
         flex-direction column
     
     .postsWrapper, .faqWrapper .faqItem
         width $full
         
-    
     // Blog Section
     .postsWrapper
         height $full
@@ -30,9 +29,8 @@
     .faqItem h3
         margin 0 auto
 
-
+// Tablet Screens
 @media (max-width: 767px)
-
 
     // Section
     section
@@ -40,7 +38,6 @@
     
 
     // Width and Direction Changes
-        
     ul.navBottomItems, .contribute, .urgentItems, .purchaseWrapper, .contactInfoWrapper ul
         flex-direction column
 
@@ -49,7 +46,6 @@
     
 
     // NavTop Section
-        
     .navTopItem:last-of-type
         flex-direction row
         
@@ -83,7 +79,6 @@
     
 
     // NavBottom Section
-        
     .navBottom
         overflow hidden
         
@@ -97,14 +92,13 @@
             
     ul.navBottomItems
         transition all 0.4s ease
-        margin-top -$full
+        margin-top -100%
         
     ul.navBottomItems.open
         margin-top 0rem
         
 
     // Urgent Causes Section
-        
     ul.urgentItemInfo
         display flex
         justify-content center
@@ -119,7 +113,6 @@
         
 
     // Blog Info Section
-        
     .infoWrapper
         flex-wrap wrap
         
@@ -128,31 +121,27 @@
 
     
     // Contact Info Section
-        
     .contactInfoWrapper .formColumn
         width $full
 
     .contactInfoWrapper li
         margin-top 2rem
 
-        
+// Mobile Screens
 @media (max-width: 480px)
 
     
     // Section
-
     section
             padding $largeSectionPadding 0
             
     
     // Header
-            
     header h1
         font-size $largerHeader
         
     
     // Logo
-        
     .logoWrapper
         padding 1rem
         flex-direction column
@@ -161,31 +150,26 @@
             
 
     // Recent Causes Section
-        
     .recentCausesNav li
         max-width 33.3%
         
 
     // Blog Section
-        
     .postsWrapperInner
         width $full
         
 
     // Counts Section
-        
     h3.countNumber
         font-size $header
     
     
     // Contact Info Section
-        
     .contactInfoWrapper form
         padding 0.5rem
         padding-top 1rem
     
 
     // Footer
-        
     footer
         padding-top 2rem

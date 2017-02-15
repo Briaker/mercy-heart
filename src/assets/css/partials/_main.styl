@@ -77,12 +77,16 @@ section
 .lightSection 
     background-color $brandPrimaryLight
     color $brandPrimaryDark
+    
     h1, h2, h3, h4, h5, p, button, input[type="submit"], input[type="button"]
         color $brandPrimaryDark
+        
     button, input[type="submit"], input[type="button"]
         border 1px solid $brandPrimaryDark
-        &:hover
-            background-color rgba(175,175,175,0.1)
+        
+    button:hover, input[type="submit"]:hover, input[type="button"]:hover
+        background-color rgba(175,175,175,0.1)
+        
     a
         color $brandPrimaryDark
 
@@ -119,16 +123,18 @@ button, input[type="submit"], input[type="button"]
     margin $smallSectionPadding
     cursor pointer
     transition all 0.2s ease-in-out
-    &:hover
-        background-color rgba(255,255,255,0.1)
+    
+button:hover, input[type="submit"]:hover, input[type="button"]:hover
+    background-color rgba(255,255,255,0.1)
 
 .socialMediaIcon
     padding 0.5rem
     color $brandNeutral
-    &:hover
-        color $brandAccent
-        transform scale(1.2)
-        transition scale 0.4s ease
+    
+.socialMediaIcon:hover
+    color $brandAccent
+    transform scale(1.2)
+    transition scale 0.4s ease
     
 .logoWrapper
     flexCenter()
@@ -145,87 +151,3 @@ button, input[type="submit"], input[type="button"]
         
 .miniWrapper
     max-width 75%
-            
-// ===================================================
-// =            END OF REPEATABLE CLASSES            =
-// ===================================================
-
-.contactInfo
-    backgroundColorWithImage(rgba(255,255,255,0.85), "../images/map.jpg")
-    
-.contactInfoWrapper
-    flexCenter()
-    flex-direction column
-    position relative
-    bottom -6rem
-    z-index 20
-    ulReset()
-    
-    ul
-        flexCenter()
-        justify-content space-around
-        width $full
-        img
-            width 48px
-            margin-bottom 2rem
-    li
-        flexCenter()
-        flex-direction column
-        p
-            margin 0.25rem
-        
-    form
-        flexCenter()
-        flex-wrap wrap
-        background-color $brandPrimaryLight
-        margin-top 4rem
-        padding 2rem
-        width $full
-        
-    .formColumn
-        flexCenter()
-        flex-direction column
-        width $half
-        height $full
-        padding 1rem
-        img
-            left 1rem
-            top 0.5rem
-            width 18px
-            position absolute
-
-    .inputWrapper, input[type="text"], textarea
-        width $full
-        margin-bottom 0.5rem
-    
-    input[type="text"], textarea
-        padding 0.5rem
-        border none
-        border 1px solid $brandNeutral
-        
-    .inputWrapper
-        position relative
-        margin 0
-        
-    input[type="text"]
-        padding-left 2.5rem
-
-    textarea
-        resize none
-        text-indent 2rem
-        height calc(((2rem + 0.5rem) * 3))
-    
-        
-
-// ===================================================
-// =                 DEBUGING CLASSES                =
-// ===================================================
-        
-// .georgia
-//     h1
-//         padding-top 45vh
-//         text-transform none
-//         font-weight 100
-//         font-family Georgia, Times, "Times New Roman", serif
-//         font-style italic
-//     

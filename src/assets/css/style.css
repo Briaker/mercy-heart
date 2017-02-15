@@ -470,7 +470,7 @@ input[type="button"] {
   font-weight: 200;
   font-family: 'Raleway', sans-serif;
   font-size: 0.8rem;
-  letter-spacing: $wideLetters;
+  letter-spacing: 0.15rem;
   margin: 2rem;
   cursor: pointer;
   -webkit-transition: all 0.2s ease-in-out;
@@ -522,137 +522,6 @@ input[type="button"]:hover {
 }
 .miniWrapper {
   max-width: 75%;
-}
-.contactInfo {
-  background-color: #4c4c4c;
-  background: -webkit-linear-gradient(left, rgba(255,255,255,0.85), rgba(255,255,255,0.85)), url("../images/map.jpg");
-  background: linear-gradient(90deg, rgba(255,255,255,0.85), rgba(255,255,255,0.85)), url("../images/map.jpg");
-  background-size: cover;
-  background-position: center center;
-}
-.contactInfoWrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  position: relative;
-  bottom: -6rem;
-  z-index: 20;
-}
-.contactInfoWrapper ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-.contactInfoWrapper ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  width: 100%;
-}
-.contactInfoWrapper ul img {
-  width: 48px;
-  margin-bottom: 2rem;
-}
-.contactInfoWrapper li {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-.contactInfoWrapper li p {
-  margin: 0.25rem;
-}
-.contactInfoWrapper form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  background-color: #fff;
-  margin-top: 4rem;
-  padding: 2rem;
-  width: 100%;
-}
-.contactInfoWrapper .formColumn {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  width: 50%;
-  height: 100%;
-  padding: 1rem;
-}
-.contactInfoWrapper .formColumn img {
-  left: 1rem;
-  top: 0.5rem;
-  width: 18px;
-  position: absolute;
-}
-.contactInfoWrapper .inputWrapper,
-.contactInfoWrapper input[type="text"],
-.contactInfoWrapper textarea {
-  width: 100%;
-  margin-bottom: 0.5rem;
-}
-.contactInfoWrapper input[type="text"],
-.contactInfoWrapper textarea {
-  padding: 0.5rem;
-  border: none;
-  border: 1px solid #e6e6e6;
-}
-.contactInfoWrapper .inputWrapper {
-  position: relative;
-  margin: 0;
-}
-.contactInfoWrapper input[type="text"] {
-  padding-left: 2.5rem;
-}
-.contactInfoWrapper textarea {
-  resize: none;
-  text-indent: 2rem;
-  height: calc(((2rem + 0.5rem) * 3));
 }
 .contribute {
   display: -webkit-box;
@@ -776,7 +645,7 @@ input[type="button"]:hover {
   margin: 1rem 0 2rem 0;
 }
 .urgentCauseWrapper h5 {
-  letter-spacing: $wideLetters;
+  letter-spacing: 0.15rem;
   font-size: 0.8rem;
   margin: 1rem 0;
 }
@@ -1364,7 +1233,7 @@ input[type="button"]:hover {
 }
 .description h5 {
   text-transform: uppercase;
-  letter-spacing: $wideLetters;
+  letter-spacing: 0.15rem;
   font-size: 0.8rem;
 }
 a.imageWrapper {
@@ -1601,6 +1470,137 @@ button.faqToggleButton.open {
   background-position: center;
   background-repeat: no-repeat;
 }
+.contactInfo {
+  background-color: #4c4c4c;
+  background: -webkit-linear-gradient(left, rgba(255,255,255,0.85), rgba(255,255,255,0.85)), url("../images/map.jpg");
+  background: linear-gradient(90deg, rgba(255,255,255,0.85), rgba(255,255,255,0.85)), url("../images/map.jpg");
+  background-size: cover;
+  background-position: center center;
+}
+.contactInfoWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+  bottom: -6rem;
+  z-index: 20;
+}
+.contactInfoWrapper ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.contactInfoWrapper ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 100%;
+}
+.contactInfoWrapper ul img {
+  width: 48px;
+  margin-bottom: 2rem;
+}
+.contactInfoWrapper li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.contactInfoWrapper li p {
+  margin: 0.25rem;
+}
+.contactInfoWrapper form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  background-color: #fff;
+  margin-top: 4rem;
+  padding: 2rem;
+  width: 100%;
+}
+.contactInfoWrapper .formColumn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 50%;
+  height: 100%;
+  padding: 1rem;
+}
+.contactInfoWrapper .formColumn img {
+  left: 1rem;
+  top: 0.5rem;
+  width: 18px;
+  position: absolute;
+}
+.contactInfoWrapper .inputWrapper,
+.contactInfoWrapper input[type="text"],
+.contactInfoWrapper textarea {
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+.contactInfoWrapper input[type="text"],
+.contactInfoWrapper textarea {
+  padding: 0.5rem;
+  border: none;
+  border: 1px solid #e6e6e6;
+}
+.contactInfoWrapper .inputWrapper {
+  position: relative;
+  margin: 0;
+}
+.contactInfoWrapper input[type="text"] {
+  padding-left: 2.5rem;
+}
+.contactInfoWrapper textarea {
+  resize: none;
+  text-indent: 2rem;
+  height: calc(((2rem + 0.5rem) * 3));
+}
 footer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1654,7 +1654,8 @@ footer input[type="text"] {
   margin: 0 0.2rem;
 }
 @media (max-width: 940px) {
-  .faqWrapper {
+  .faqWrapper,
+  .postsWrapper {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -1750,7 +1751,7 @@ footer input[type="text"] {
   ul.navBottomItems {
     -webkit-transition: all 0.4s ease;
     transition: all 0.4s ease;
-    margin-top: -$full;
+    margin-top: -100%;
   }
   ul.navBottomItems.open {
     margin-top: 0rem;

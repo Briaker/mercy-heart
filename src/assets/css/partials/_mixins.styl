@@ -1,19 +1,22 @@
+// Convert text to upper case and spaces the letters further apart
 wideTitle()
     text-transform uppercase
     letter-spacing $wideLetters
     
+// Removes all list styles, margin and padding
 ulReset()
     ul
         list-style none
         margin 0
         padding 0
 
+// Centers children vertically and horizontally using flex
 flexCenter()
     display flex
     align-items center
     justify-content center
     
-//  Returns an after element that will overlay over the parent container
+//  Adds an after element that will overlay over the parent container
 //  @param  imageUrl    the background image
 //  @param  opac        the opacity of the image overlay, default: 1
 patternOverlay(imageUrl, opac = 1)
@@ -29,7 +32,7 @@ patternOverlay(imageUrl, opac = 1)
         right 0
         z-index 10
         
-//  Returns a background image with a color overlayed over top of it.
+//  Adds a background image with a color overlayed over top of it.
 //  There is also a fallback background-color.
 //  @param  color       an rgba() value, this is the overlayed over the image
 //  @param  imageUrl    the background image
@@ -41,7 +44,7 @@ backgroundColorWithImage(color, imageUrl, size = cover, position = center center
     background-size size
     background-position position
     
-//  Returns a background image with a gradient overlayed over top of it.
+//  Adds a background image with a gradient overlayed over top of it.
 //  There is also a fallback background-color.
 //  @param  gradient    a linear-gradient() value, this is the overlayed over the image
 //  @param  imageUrl    the background image
