@@ -1,0 +1,107 @@
+.faq
+    padding-left 2rem
+    padding-right 2rem
+
+.faqWrapper
+    flexCenter()
+    
+.faqItemWrapper
+    flexCenter()
+    flex-direction column
+    
+.faqItem
+    flexCenter()
+    justify-content flex-start
+    flex-direction column
+    height 400px
+    width $third
+    margin 0 2rem
+    
+.faqItem:not(:last-child)
+    h3
+        font-size $bigHeader
+        text-transform none
+        text-align left
+        margin-bottom 1rem
+        align-self flex-start
+        
+.faqLeft
+    p
+        color $brandDim
+        
+    ulReset()
+    
+    ul
+        width $full
+        margin-top 1rem
+        
+    li
+        border-top 1px solid $brandNeutral
+        padding 0.5rem 0
+        
+    li:last-child
+        border-bottom 1px solid $brandNeutral
+        
+    li:before
+        content '\25CB '
+        color $brandAccent
+        padding-right: 1rem
+
+.faqRight
+    backgroundGradientWithImage($gradientDark, "../images/volunteer.jpg")
+    justify-content flex-end
+    h3
+        font-weight 600
+        color $brandPrimaryLight
+    button
+        color $brandPrimaryLight
+        border 1px solid $brandPrimaryLight
+        
+.questionWrapper
+    flexCenter()
+    width 100%
+    margin-bottom 0.5rem
+    p
+        text-transform uppercase
+        margin 0
+        padding-left 1rem
+        line-height 2rem
+    .question
+        border 1px solid $brandPrimaryDark
+        border-right 0
+        height 2rem
+        min-width 220px
+        width 100%
+        
+.answerWrapper
+    padding 0 1rem
+    overflow hidden
+    p
+        color $brandDim
+        
+.answer
+    transition all 0.4s ease
+    margin-top -100%
+        
+.answer.open
+    margin-top 1rem
+
+button.faqToggleButton
+    border none
+    background url("../images/arrow-right.png") $brandAccent
+    background-position center
+    background-repeat no-repeat
+    color $brandPrimaryLight
+    font-size 1rem
+    font-weight 100
+    width 2rem
+    height 2rem
+    margin 0
+    
+button.faqToggleButton:hover, button.faqToggleButton.open:hover
+    background-color darken($brandAccent, 3)
+    
+button.faqToggleButton.open
+    background url("../images/arrow-down.png") $brandAccent
+    background-position center
+    background-repeat no-repeat

@@ -8,6 +8,7 @@ $(document).ready(function(){
         loopAdditionalSlides: 0,
         nextButton: '.causesNext',
         prevButton: '.causesPrev',
+        autoResize: false,
         breakpoints: {
             1170: {
                 slidesPerView: 2

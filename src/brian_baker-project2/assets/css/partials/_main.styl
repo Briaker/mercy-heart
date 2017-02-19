@@ -1,0 +1,153 @@
+html
+    font-family $openSans
+    color $brandPrimaryLight
+    
+body
+    background darkgray 
+    
+    
+// ===================================================
+// =                REPEATABLE CLASSES               =
+// ===================================================
+    
+a
+    color $brandPrimaryLight
+    text-decoration none    
+
+h1, h2, h3, h4, h5
+    color $brandPrimaryLight
+    font-family $raleway
+    font-weight 200
+    text-transform uppercase
+    text-align center
+    margin 0
+    
+h1
+    font-size $largestHeader
+
+h2
+    font-size $largerHeader
+    font-weight 500
+
+h3
+    font-size $largeHeader
+    
+h4
+    font-size $header
+    
+strong
+    font-weight 800
+    
+blockquote
+    text-align center
+    font-size $grandParagraph
+    font-weight 100
+    
+.largeQuotes
+    position relative
+    max-width 75%
+    
+.largeQuotes:before, &:after 
+    position absolute
+    color $brandAccent
+    font-family $pTSans
+    font-size 5rem
+        
+.largeQuotes:before
+    top 0
+    content '“'
+    left 0
+        
+.largeQuotes:after
+    top 0
+    content '”'
+    right 0
+    
+img
+    width $full
+
+section
+    flexCenter()
+    padding $largeSectionPadding $smallSectionPadding
+
+.wrapper
+    max-width $wrapperWidth
+    width 100%
+
+.lightSection 
+    background-color $brandPrimaryLight
+    color $brandPrimaryDark
+    
+    h1, h2, h3, h4, h5, p, button, input[type="submit"], input[type="button"]
+        color $brandPrimaryDark
+        
+    button, input[type="submit"], input[type="button"]
+        border 1px solid $brandPrimaryDark
+        
+    button:hover, input[type="submit"]:hover, input[type="button"]:hover
+        background-color rgba(175,175,175,0.1)
+        
+    a
+        color $brandPrimaryDark
+
+a:hover, a:active
+    color $brandAccent
+    
+.subHeading
+    font-size $header
+    text-transform none
+
+.grandParagraph
+    font-size $grandParagraph
+
+.miniParagraph
+    font-size $miniParagraph
+
+span.highlight, a.highlight
+    color $brandAccent
+    
+span.thin
+    font-weight 100
+    
+button, input[type="submit"], input[type="button"]
+    color $brandPrimaryLight
+    background none
+    width 170px
+    height 40px
+    border 1px solid $brandPrimaryLight
+    text-transform uppercase
+    font-weight 200
+    font-family $raleway
+    font-size $miniParagraph
+    letter-spacing $wideLetters
+    margin $smallSectionPadding
+    cursor pointer
+    transition all 0.2s ease-in-out
+    
+button:hover, input[type="submit"]:hover, input[type="button"]:hover
+    background-color rgba(255,255,255,0.1)
+
+.socialMediaIcon
+    padding 0.5rem
+    color $brandNeutral
+    
+.socialMediaIcon:hover
+    color $brandAccent
+    transform scale(1.2)
+    transition scale 0.4s ease
+    
+.logoWrapper
+    flexCenter()
+    margin 2rem
+    width $logoWrapperWidth
+    justify-content space-between
+    h2
+        font-size 2rem
+    img
+        margin 0 1rem
+        width 91px
+    :nth-child(2)
+        order 2
+        
+.miniWrapper
+    max-width 75%

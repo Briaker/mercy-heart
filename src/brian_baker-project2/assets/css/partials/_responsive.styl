@@ -1,0 +1,175 @@
+// Small Screens
+@media (max-width: 940px)
+    
+    // Width and Direction Changes
+    .faqWrapper, .postsWrapper
+        flex-direction column
+    
+    .postsWrapper, .faqWrapper .faqItem
+        width $full
+        
+    // Blog Section
+    .postsWrapper
+        height $full
+        
+    .postsWrapperInner
+        height 500px
+        width 75% 
+        
+    .postsWrapperInner:last-of-type
+        margin-left 0px
+        margin-top $blogPostMargin
+    
+
+    // FAQ Section
+    .faqItem
+        height auto
+        padding $smallSectionPadding 0
+        
+    .faqItem h3
+        margin 0 auto
+
+// Tablet Screens
+@media (max-width: 767px)
+
+    // Section
+    section
+        padding $largeSectionPadding $smallSectionPadding
+    
+
+    // Width and Direction Changes
+    ul.navBottomItems, .contribute, .urgentItems, .purchaseWrapper, .contactInfoWrapper ul
+        flex-direction column
+
+    .contribution, .urgentItem
+        width $full
+    
+
+    // NavTop Section
+    .navTopItem:last-of-type
+        flex-direction row
+        
+    .menuToggle
+        display initial
+        
+    .navTopItems
+        position relative
+        
+    .navTopItem
+        width initial
+        
+    .navTopItem.socialMedia, .navTopItem.menu
+        position absolute
+        top 1rem
+        
+    .navTopItem.menu
+        margin-left 1rem
+        left 0
+        
+    .navTopItem.socialMedia
+        margin-right 1rem
+        right 0
+        
+    .socialMediaIcon
+        padding-top 0
+        paddin-bottom 0
+        
+    .navTopItem.logo
+        width 90%
+    
+
+    // NavBottom Section
+    .navBottom
+        overflow hidden
+        
+    li.navBottomItem
+        width $full
+        border none
+        text-align center
+        
+    li.navBottomItem a
+        width $full
+            
+    ul.navBottomItems
+        transition all 0.4s ease
+        margin-top -100%
+        
+    ul.navBottomItems.open
+        margin-top 0rem
+        
+
+    // Urgent Causes Section
+    ul.urgentItemInfo
+        display flex
+        justify-content center
+        
+    .urgentLeft h2
+        text-align center
+        word-spacing initial
+        
+    .urgentRight ul li
+        padding 1rem
+        display inline-block
+        
+
+    // Blog Info Section
+    .infoWrapper
+        flex-wrap wrap
+        
+    .infoWrapper .info
+        font-size $miniParagraph
+
+    
+    // Contact Info Section
+    .contactInfoWrapper .formColumn
+        width $full
+
+    .contactInfoWrapper li
+        margin-top 2rem
+
+// Mobile Screens
+@media (max-width: 480px)
+
+    
+    // Section
+    section
+            padding $largeSectionPadding 0
+            
+    
+    // Header
+    header h1
+        font-size $largerHeader
+        
+    
+    // Logo
+    .logoWrapper
+        padding 1rem
+        flex-direction column
+        img
+            margin 1rem
+            
+
+    // Recent Causes Section
+    .recentCausesNav li
+        max-width 33.3%
+        
+
+    // Blog Section
+    .postsWrapperInner
+        width $full
+        
+
+    // Counts Section
+    h3.countNumber
+        font-size $header
+    
+    
+    // Contact Info Section
+    .contactInfoWrapper form
+        padding 0.5rem
+        padding-top 1rem
+    
+
+    // Footer
+    footer
+        padding-top 2rem

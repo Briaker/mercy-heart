@@ -7,7 +7,8 @@
     
     .postsWrapper, .faqWrapper .faqItem
         width $full
-        
+
+
     // Blog Section
     .postsWrapper
         height $full
@@ -113,12 +114,31 @@
         
 
     // Blog Info Section
+        
+    a.imageWrapper, .post.large a.imageWrapper
+        height 400px
+
     .infoWrapper
         flex-wrap wrap
         
     .infoWrapper .info
         font-size $miniParagraph
 
+    .postsWrapperInner
+        width $full
+        flex-direction column
+        flex-wrap nowrap
+        height auto
+
+    .post.small
+        margin-bottom 20px
+        width 100%
+        
+    .post.small:nth-child(odd)
+        margin-right 0
+    
+    .description
+        padding 2rem 0
     
     // Contact Info Section
     .contactInfoWrapper .formColumn
@@ -157,13 +177,17 @@
     // Blog Section
     .postsWrapperInner
         width $full
+    
+    
+    // Counters Section
+    .counters ul
+        width $full
+        flex-wrap wrap
         
+    .counters ul li
+        width $half
 
-    // Counts Section
-    h3.countNumber
-        font-size $header
-    
-    
+
     // Contact Info Section
     .contactInfoWrapper form
         padding 0.5rem

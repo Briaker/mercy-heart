@@ -1,0 +1,57 @@
+// Convert text to upper case and spaces the letters further apart
+wideTitle()
+    text-transform uppercase
+    letter-spacing $wideLetters
+    
+// Removes all list styles, margin and padding
+ulReset()
+    ul
+        list-style none
+        margin 0
+        padding 0
+
+// Centers children vertically and horizontally using flex
+flexCenter()
+    display flex
+    align-items center
+    justify-content center
+    
+//  Adds an after element that will overlay over the parent container
+//  @param  imageUrl    the background image
+//  @param  opac        the opacity of the image overlay, default: 1
+patternOverlay(imageUrl, opac = 1)
+    position relative
+    &:after
+        content ' '
+        background url(imageUrl)
+        position absolute
+        opacity opac
+        top 0
+        bottom 0
+        left 0
+        right 0
+        z-index 10
+        
+//  Adds a background image with a color overlayed over top of it.
+//  There is also a fallback background-color.
+//  @param  color       an rgba() value, this is the overlayed over the image
+//  @param  imageUrl    the background image
+//  @param  size        the size of the background image, default: cover
+//  @param  position    the position of the background image, default: center center
+backgroundColorWithImage(color, imageUrl, size = cover, position = center center)
+    background-color rgb(76,76,76)
+    background linear-gradient(90deg, color, color),url(imageUrl)
+    background-size size
+    background-position position
+    
+//  Adds a background image with a gradient overlayed over top of it.
+//  There is also a fallback background-color.
+//  @param  gradient    a linear-gradient() value, this is the overlayed over the image
+//  @param  imageUrl    the background image
+//  @param  size        the size of the background image, default: cover
+//  @param  position    the position of the background image, default: center center
+backgroundGradientWithImage(gradient, imageUrl, size = cover, position = center center)
+    background-color rgb(76,76,76)
+    background gradient,url(imageUrl)
+    background-size size
+    background-position position

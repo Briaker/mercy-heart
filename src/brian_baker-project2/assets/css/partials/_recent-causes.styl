@@ -1,0 +1,154 @@
+.recentCauses
+    padding-left 0
+    padding-right 0
+    position relative
+    
+.recentCausesWrapper
+    ulReset()
+    display flex
+    overflow hidden
+    flex-direction column
+
+.recentCausesNav
+    flexCenter()
+    flex-wrap wrap
+    
+    li
+        padding 1rem 2rem
+
+.causesWrapper
+    flexCenter()
+    flex-wrap no-wrap
+    padding-top $smallSectionPadding
+    
+.causesSliderContainer
+    width $full
+    position relative
+
+.sliderPrev, .sliderNext
+    position absolute
+    top 50%
+    transform translateY(-50%)
+    z-index 10
+    width 40px
+    height 40px
+    cursor pointer
+    background-size cover
+    background-position center center
+    
+.causesArrowSVG
+    fill $brandNeutral
+
+.causesPrev
+    left 4rem
+    
+.causesNext
+    right 4rem
+    
+.causeWrapper
+    background-color $brandPrimaryDark
+
+    .subTitle
+        color #989898
+        
+    .causeTitle
+        font-weight 600
+        font-size $bigHeader
+        text-transform none
+        color $brandPrimaryLight
+        padding 2rem 0
+        padding-top 90%
+        
+.causeWrapper.water
+    background url("../images/donate/water.jpg")
+    
+.causeWrapper.adopt
+    background url("../images/donate/adopt.jpg")
+    
+.causeWrapper.hunger
+    background url("../images/donate/hunger.jpg")
+        
+.causeWrapper.water, .causeWrapper.adopt, .causeWrapper.hunger
+    background-size 120%
+    background-position center top
+    
+.progressBottom
+    flexCenter()
+    flex-direction column
+    background-color $brandPrimaryLight
+    border 1px solid $brandNeutral
+    border-top 0
+
+.progressBarWrapper
+    background-color $brandNeutral
+    height 10px
+    patternOverlay("../images/stripes-pattern.png", opac = 0.3)
+
+.progressBar
+    position absolute
+    background-color $brandAccent
+    top 0
+    left 0
+    bottom 0
+    width 10%
+    transition width 0.4s ease-in-out
+    
+.progressBar.hunger
+    animation fillUpHunger 1s ease forwards
+    animation-delay 0.2s
+    
+.progressBar.water
+    animation fillUpWater 1s ease forwards
+    animation-delay 0.2s
+    
+.progressBar.adopt
+    animation fillUpAdopt 1s ease forwards
+    animation-delay 0.2s
+    
+@keyframes fillUpHunger
+    to
+        width 93%
+        
+@keyframes fillUpWater
+    to
+        width 65%
+        
+@keyframes fillUpAdopt
+    to
+        width 45%
+        
+.countWrapper
+    flexCenter()
+    .count
+        flexCenter()
+        flex-direction column
+        
+        p
+            text-transform uppercase
+            font-weight 100
+            margin 0
+            
+        h3
+            text-transform lowercase
+            color $brandPrimaryDark
+            font-family $openSans
+            font-weight 900
+            
+        .number
+            font-size $largerHeader
+            
+.countOf
+    padding 0.75rem
+    font-weight 100
+    font-family $georgia
+    font-style italic
+    font-size 1.4rem
+    line-height 1rem
+    margin-top 0
+    margin 0 1rem
+    height 100%
+    background linear-gradient(115deg, #FFFFFF 0, #FFFFFF 39px, $brandNeutral 40px, #FFFFFF 41px, #FFFFFF 50px)
+    background-color goldenrod
+    
+    p
+        margin 1rem 0
