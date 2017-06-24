@@ -67,21 +67,26 @@
     strong
         font-family $openSans
         
-.progressCircle
-    position absolute
+.progressCircle, .loadingCircle
+    position relative
     width 200px
+    margin 2rem
     
 .stOverlayAnimate
     animation fillUp 1s ease forwards
     animation-delay 0.2s
-
-.stRed, .stDashes, .stOverlay
+    
+.stOverlayAnimateB
+    animation stroke-shrink 2s ease infinite
+    animation-delay 0.2s
+    
+.stRed, .stBG, .stDashes, .stOverlay, .stOverlayB
     fill none
     stroke $brandAccent
     stroke-width 10
     stroke-miterlimit 10
     stroke-dasharray 1000, 1000
-    stroke-dashoffset 227
+    stroke-dashoffset 0
     
 .stDashes
     stroke lighten($brandAccent, 10)
@@ -90,7 +95,56 @@
 .stOverlay
     stroke-width 11
     stroke $brandNeutral
+
+.stBG
+    stroke rgba(230,230,230,0.4)
+    
+.stOverlayB
+    stroke-width 11
+    stroke #7BD7E5
+    stroke-dasharray 1000, 1000
+    stroke-dashoffset 0
     
 @keyframes fillUp
     to
         stroke-dashoffset 900
+        
+        
+@keyframes stroke-shrink
+    0% 
+        stroke-dasharray 1,1000
+    100% 
+        stroke-dasharray 420.25,1000
+        stroke-dashoffset -900
+        
+        // 25% (420.25) = (773 / 4) + 227
+        // 50% (613.5) = (773 / 2) + 227
+        // 75% (806.75) = (773 / 4) + 227
+        // 100% (1000) = (773 / 4) + 227
+            
+.circular-loader 
+    animation rotate 2s linear infinite
+    
+.loader-path
+    stroke-dasharray 150,200
+    stroke-dashoffset -10
+    stroke-linecap round
+    stroke #7BD7E5
+    animation dash 1.5s ease-in-out infinite
+    
+@keyframes dash 
+    0% 
+        stroke-dasharray 1,200
+        stroke-dashoffset 0
+      
+    50% 
+        stroke-dasharray 89,200
+        stroke-dashoffset -35
+      
+    100% 
+        stroke-dasharray 89,200
+        stroke-dashoffset -124
+  
+@keyframes rotate
+    100% 
+        transform rotate(360deg)

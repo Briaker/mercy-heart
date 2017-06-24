@@ -523,6 +523,19 @@ input[type="button"]:hover {
 .miniWrapper {
   max-width: 75%;
 }
+.loaderWrapper {
+  background-color: #fff;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
 .contribute {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -701,9 +714,11 @@ input[type="button"]:hover {
 .urgentRight strong {
   font-family: 'Open Sans', sans-serif;
 }
-.progressCircle {
-  position: absolute;
+.progressCircle,
+.loadingCircle {
+  position: relative;
   width: 200px;
+  margin: 2rem;
 }
 .stOverlayAnimate {
   -webkit-animation: fillUp 1s ease forwards;
@@ -711,15 +726,23 @@ input[type="button"]:hover {
   -webkit-animation-delay: 0.2s;
           animation-delay: 0.2s;
 }
+.stOverlayAnimateB {
+  -webkit-animation: stroke-shrink 2s ease infinite;
+          animation: stroke-shrink 2s ease infinite;
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
 .stRed,
+.stBG,
 .stDashes,
-.stOverlay {
+.stOverlay,
+.stOverlayB {
   fill: none;
   stroke: #de3c2f;
   stroke-width: 10;
   stroke-miterlimit: 10;
   stroke-dasharray: 1000, 1000;
-  stroke-dashoffset: 227;
+  stroke-dashoffset: 0;
 }
 .stDashes {
   stroke: #e5655b;
@@ -729,6 +752,27 @@ input[type="button"]:hover {
   stroke-width: 11;
   stroke: #e6e6e6;
 }
+.stBG {
+  stroke: rgba(230,230,230,0.4);
+}
+.stOverlayB {
+  stroke-width: 11;
+  stroke: #7bd7e5;
+  stroke-dasharray: 1000, 1000;
+  stroke-dashoffset: 0;
+}
+.circular-loader {
+  -webkit-animation: rotate 2s linear infinite;
+          animation: rotate 2s linear infinite;
+}
+.loader-path {
+  stroke-dasharray: 150, 200;
+  stroke-dashoffset: -10;
+  stroke-linecap: round;
+  stroke: #7bd7e5;
+  -webkit-animation: dash 1.5s ease-in-out infinite;
+          animation: dash 1.5s ease-in-out infinite;
+}
 @-webkit-keyframes fillUp {
   to {
     stroke-dashoffset: 900;
@@ -737,6 +781,64 @@ input[type="button"]:hover {
 @keyframes fillUp {
   to {
     stroke-dashoffset: 900;
+  }
+}
+@-webkit-keyframes stroke-shrink {
+  0% {
+    stroke-dasharray: 1, 1000;
+  }
+  100% {
+    stroke-dasharray: 420.25, 1000;
+    stroke-dashoffset: -900;
+  }
+}
+@keyframes stroke-shrink {
+  0% {
+    stroke-dasharray: 1, 1000;
+  }
+  100% {
+    stroke-dasharray: 420.25, 1000;
+    stroke-dashoffset: -900;
+  }
+}
+@-webkit-keyframes dash {
+  0% {
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -35;
+  }
+  100% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -124;
+  }
+}
+@keyframes dash {
+  0% {
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -35;
+  }
+  100% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -124;
+  }
+}
+@-webkit-keyframes rotate {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@keyframes rotate {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
   }
 }
 .recentCauses {

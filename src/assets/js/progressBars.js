@@ -1,23 +1,31 @@
 $(document).ready(function(){
+    
+    function elementOnScreen(element) {
+        // The position of the top of the view on the scroll bar
+        var docViewTop = $(window).scrollTop();
+
+        // The position of the bottom of the view on the scroll bar
+        var docViewBottom = docViewTop + $(window).height();
+
+        // The position of the top of the element on the scroll bar
+        var elementTop = $(element).offset().top;
+
+        // Returns true if the element is within the bounds of the current view
+        return ((elementTop <= docViewBottom) && (elementTop >= docViewTop));
+    }
+
+    
 
     $(window).scroll(function(){
-
-        function elementScrolled(elem)
-        {
-            var docViewTop = $(window).scrollTop();
-            var docViewBottom = docViewTop + $(window).height();
-            var elemTop = $(elem).offset().top;
-            return ((elemTop <= docViewBottom) && (elemTop >= docViewTop));
-        }
-         
-        if(elementScrolled('.progressCircle')) {
+        
+        if(elementOnScreen('.progressCircle')) {
             circle = $('.stOverlay');
             if(!circle.hasClass('stOverlayAnimate')) {
                 circle.addClass('stOverlayAnimate');
             }
         }
 
-        if(elementScrolled('.progressBar')) {
+        if(elementOnScreen('.progressBar')) {
             water = $('.progressWater');
             adopt = $('.progressAdopt');
             hunger = $('.progressHunger');
